@@ -1,0 +1,31 @@
+<start>::=<metodo>
+        <metodo>::='metodo'<id>'('<parametros>'):'<retorno>'{'<escopo>'}'
+                 <parametros>::= <lista_parametros>                                    
+                 <retorno>::= <tipo_retorno>
+                           
+                 <escopo>::= <declaracao_variaveis>|<>
+               
+                 <escopo_dois>::= 
+                               (<atribuir_valores>
+                               |<comando_se>
+                               |<comando_escreva>
+                               |<comando_enquanto> 
+                               |<comando_atribuicao>
+                               |<chamadaDeMetodo>
+                               |<Leia>
+                               |<>)<newline>
+                               <mais_comandos>
+                               
+                          
+                           <atribuir_valores>::=<atribuir>
+                           <comando_se>::=<se> 
+                           <comando_escreva>::=<escreva> 
+                           <comando_enquanto>::=<enquanto> 
+                           <comando_atribuicao>::=<atribuicao> 
+                           <chamadaDeMetodo>::=<metodo>                                                   
+                           
+                           <Leia>::= 'leia(' <conteudo_leia>                   
+                                   <conteudo_leia>::= <identificador> <ler_mais>
+                                   <ler_mais>::= ',' <conteudo_leia> | ');'                                                 
+                           
+                          <mais_comandos>::=<escopo_dois> | 'Resultado'<retorno>''
